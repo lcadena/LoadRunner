@@ -1,10 +1,13 @@
 Action()
 {
 
+	web_set_max_html_param_len("4198646");
+
 	lr_start_transaction("01- Login");
 
 	web_set_user("EU.BOEHRINGER.COM\\ramirein", 
-		lr_unmask("5e5e3f8e122f9af80a790ea71d8164"), 
+		//lr_unmask("5e5e3f8e122f9af80a790ea71d8164"),
+		"Capgemini24",		
 		"coraqa.eu.boehringer.com:80");
 
 	web_add_auto_header("DNT", 
@@ -26,13 +29,6 @@ Action()
 		SEARCH_FILTERS,
 		LAST);
 	
-	web_reg_save_param_ex(
-		"ParamName=ViewState",
-		"LB=value=\"/",
-		"RB=/",
-		SEARCH_FILTERS,
-		LAST);
-
 	web_set_sockets_option("SSL_VERSION", "TLS1.2");
 
 	web_add_cookie("SRCHD=AF=NOFORM; DOMAIN=iecvlist.microsoft.com");
@@ -61,8 +57,6 @@ Action()
 		"Mode=HTML", 
 		LAST);*/
 	
-
-
 	web_url("App", 
 		"URL=http://coraqa.eu.boehringer.com/App/", 
 		"Resource=0", 
@@ -70,98 +64,6 @@ Action()
 		"Referer=http://coraqa.eu.boehringer.com/", 
 		"Snapshot=t358.inf", 
 		"Mode=HTML", 
-		EXTRARES, 
-		"Url=Styles_New/css/_fonts.css", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=ScriptResource.axd?d=14iMQzZcL4PrnZzafwqboUkNMnYP8lh5DvFeKy1u_oMBS3PWYvUmUVckvwQWmxakJHKLTs1CKqY5hlqjgTjnlEoUBzBrw9RocEhZjxCJfc2MZhfmLH1QXRmZPIO83PUiQ00ySw2&t=ffffffff93f2983c", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=WebResource.axd?d=aTzRi-U9R_FYSEQ63c1rxnPf31g5sWFTykDCaU9j3D1BK8AtHcaLg9QHnfnPQFYQI0x_nIifVP2CCnjealLTgCLjrAQ1&t=637103382965614113", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=ScriptResource.axd?d=C4jdYCkU8OdE_Hp3Fxh214ALwNiJAXsV5wfI3S8_coWAlO3HrWjUZudi-1GuU2Kvnye-dCNcCHbZLp-DkY7G3PICyv5-BjkIbeSBsPc_spskoOaHBl_rLXX-cp3LAPMD7Flizc-xnhILxffOGB0vPXv51QtSBylIroIwcgmk47xjwKzd0&t=ffffffffecf19baa", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/loader.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=ScriptResource.axd?d=YLw20oY_OKj2RMXFPFhaHd_Tl4T1mJfZ1DBwPOv9amPjCD-zqhemR7FiOGworkNGLilXDVMSN2qWS_l9QyQFfQhcFw8zbwQimWTdzj2Dj0ZE0Nv_WmaAs-x4qY6KWHBTkO9xkQ2&t=ffffffffcfeeeb28", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=ScriptResource.axd?d=EpcmvBAsgMZsEqvvyUfTzMB_-u-JSPBh7vwM1OP2GxpzWOtzrHEwlsJVDmuxYgYIpKsxiD2xxORucMIWTdMqs9YW03kzG1jlQKHGsOqPATLYerjWnouGx6KYYNdZhxRjXDIbeg2&t=ffffffffcfeeeb28", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=ScriptResource.axd?d=i5sz6KJK-0pb9LUjEEAKGZfe6w2NbQ8XpktEVIkFA2Ed7insxfWGqhcqfOZLQoCBL8movl11-GcW9WlmrqVy6slP2URVfbn9WwKVZaaFxOSmdhINSsfY3gZ12zUrq9dui4YuzQ2&t=ffffffffcfeeeb28", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=ScriptResource.axd?d=ISVIM9uHCqC_DQaOZxTf-9jeiZOxRoOWHoKJI1tnpLeZGI9fn5aIh0iCu1_agvpcnvXexxLhNcoVF5igLA7iFPwe2qt7r4QBzNYYE7vhmoZkt-ODJhNoH_esADg9qxzLexRlBzUMULKXveBpE5GgWcMXc8BtJCtY4kdoC53aKC27teiKdZqp33qlVBazqgRNKykgmg2&t=ffffffffecf19baa", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=ScriptResource.axd?d=R_9CQvxiI4v4BufDyypu0Iarjl4OsZv5wfuxiqAmQB3jvoJbCL0mcYwsJp27pdgOsxhancDhs2KeMwvTOQGYGBd_QB0EDk-wndRZ6Vuy6PR27UUSeiuDVd9x6LfdcpkrNNzZ5HKURuRBocexTKxi8PJde_E1&t=ffffffffcfeeeb28", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=ScriptResource.axd?d=FIXN60YaZn2spZHodwy8XFdFcUkLjLby_vmotdiWVg3DIlqZqAQtb_CCqq2hRDHa8fOdwcCSid7UHc2EOLCLNSvSIQ7wUd7IS4zyBlR5wEGbaTZVKbkmI9S-wkCU2NxPW58GOQ2&t=ffffffffcfeeeb28", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=ScriptResource.axd?d=9X0qrb2rWl7P5tOXj3qY5wKzEbehrCatP4F2bp50SgbZdMWxHbOYOpSVErMpcJJh1mAuU0-eEKLVDvyTOO0uuLOm3bnIPt7mSj2RJo4Xxz2fi6w_kvnlh81BfQb1dB5Hp7748w2&t=ffffffffcfeeeb28", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=ScriptResource.axd?d=oG5V1YwrNRfjrNDyET2_V8Mf6OSOnguQFj9r02wA7IP5GG57pmF7PO-_nilKSvLpxX9IP7Gv79yV5QZsCrivAyD2If76C2V1WWVJWQZCWdp1Jr0ZvDBqvx9pmiQgK6HdA5igNA2&t=ffffffffcfeeeb28", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=ScriptResource.axd?d=hkoPLw3Xykn6TyqFvLoa7JBI-zceulkpDtw9Z450sDRLerdcWCcxybh-jNMDyv_wQzbC1n-px_Uygc8hpTDFGOtdvZm34-vV6PvKbFlGzrr44EDja_7u9DJhp1u3Lls484eeOw2&t=ffffffffcfeeeb28", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=ScriptResource.axd?d=zEnuTYlIqZQbMeeESwROgdib__mr6CVozIGBkYhJU1VvQGb3MRK3UN_GffMar3xMEMtOlWq7Aq_d_Dy3ZP5t-2ZSbWec3NLvRPvySpEDm_s6YEJ65TFsf1FPbO2Ej3QhvsVA0w2&t=ffffffffcfeeeb28", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/event.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=ScriptResource.axd?d=7OyM_vwRilCzp34BQgwn_Gvw1S6C9Ybl8ehLcnkphTRIzAp6ajCgHvM5ZLknI9j6jDTaNiKVwVEceDZGvwX1Hi3Gx3UpbaSH0O9d2D04wVwQCtEDHH-MID56J9wIA7IK_0Ir1w2&t=ffffffffcfeeeb28", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=ScriptResource.axd?d=bW5WVNNGDkpjrNH2HJYbJJD5xFh-hh1O3p8c1_EmqddixM1BF-tRpN33OKIFQpQWXunIXuLBdjPxHLGOIQ-s0rMf1YzJiHP0mB455vnLI8MLX0jT7yCtLklpb1XqHjjiCtFPSA2&t=ffffffffcfeeeb28", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=ScriptResource.axd?d=SDG7jaITFSPabWsbdTAsRTa7S14cCnTIm7cTm5RJoWeLF5HXWsS0YnIy5V2q0U9v3l3Y2ZJOco4LAfLaXhWsM3ftLP2hpIkqkjxml-ow0lw60GMcu_LmvC4jtPm5kUsjteWBgg2&t=ffffffffcfeeeb28", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=ScriptResource.axd?d=WERvkjS-7jCjS7VdygL9mc_-OsmdcHCaagZGMOATppHtCzHXRG12TlA0snUQx4fDgAiybModiUc0Vln8dhFORj886BXtXpVdm6NsdboCLrYMC-_llmgK7ac8FYAj5eGTYAoNDA2&t=ffffffffcfeeeb28", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Images/Alert_Large.gif", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=ScriptResource.axd?d=MwKOLC-dg823FpWBcs-10zIXRJD95NIS2zbRc9_1NVRSqiqFFVIKgXPa-S4b_ChzygYmPv7-rJNT4OLuUBYLeHdM-cguusKPX7S2LkcooeQjJrL99wXSE2lND7PLQ6fL7P89GQ2&t=ffffffffcfeeeb28", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Images/GreenTick.gif", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Images/ajax-loader.gif", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/editor_basic.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/env.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/ckeditor_basic.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/log.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/dom.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/tools.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/dtd.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/dom/event.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/dom/domobject.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/dom/node.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/dom/window.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/dom/document.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/dom/nodelist.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/dom/element.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/dom/documentfragment.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/dom/walker.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/dom/range.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/dom/iterator.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/command.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/ckeditor_base.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/config.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/filter.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/focusmanager.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/keystrokehandler.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/lang.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/scriptloader.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/resourcemanager.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/plugins.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/ui.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/editor.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/htmlparser.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/htmlparser/basicwriter.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/htmlparser/node.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/htmlparser/comment.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/htmlparser/text.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/htmlparser/cdata.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/htmlparser/fragment.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/htmlparser/filter.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/htmldataprocessor.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/htmlparser/element.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/template.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/ckeditor.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/creators/inline.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/creators/themedui.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/editable.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/selection.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/style.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/dom/comment.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/dom/elementpath.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/dom/text.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/dom/rangelist.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/skin.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Scripts_New/controls/ckeditor/core/_bootstrap.js", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Styles_New/controls/mainmenu/main-agreement.png", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Styles_New/controls/mainmenu/main-case.png", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Styles_New/controls/mainmenu/main-monitoring.png", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Styles_New/images/button-icon-plus.png", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Styles_New/controls/mainmenu/main-partner.png", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Images/wait.gif", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Styles_New/controls/mainmenu/main-other.png", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=CSSStyle/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=CSSStyle/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Styles_New/images/message-bg.png", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Styles_New/images/message-icon-warning.png", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Styles_New/controls/mainmenu/meta-help.png", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Styles_New/controls/mainmenu/meta-home.png", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
-		"Url=Styles_New/controls/mainmenu/meta-settings.png", "Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", ENDITEM, 
 		LAST);
 
 	lr_end_transaction("01- Login",LR_AUTO);
@@ -207,11 +109,6 @@ Action()
 		"Referer=http://coraqa.eu.boehringer.com/App/MyCarizma.aspx", 
 		"Snapshot=t361.inf", 
 		"Mode=HTML", 
-		EXTRARES, 
-		"Url=ScriptResource.axd?d=_cx5oBki89H9nGi2l3ekclk-46eXJQWNSL6GP7OCVXW35dZZrx37Fh2T-FFcEZ6aBdn5zzxPrnDdi3kJ0Vyu-wrbt0eBhkMJ8PSByWDQyvOJ3Y08LBtYR9KOKR710zLKBUFqK9x5SHJwS3XLMI4nZJALZro1&t=ffffffff93f2983c", "Referer=http://coraqa.eu.boehringer.com/App/ContentPage.aspx?AgrID={contractID}", ENDITEM, 
-		"Url=ScriptResource.axd?d=cwdigxX3jD4dBeDpqhB-aDud3MxVWPvndqiTUn4RFT3QkMG9PzgPxKZsKwWpOQQ9mBakXqDSBll0Qi-OYMVzI7kZSSd15f6s9E-h-DAwrz3gXup2194C6zaXblzQUIe2kBWYuHyOlnWX3myhYuR3-Pirdbc1&t=ffffffff93f2983c", "Referer=http://coraqa.eu.boehringer.com/App/ContentPage.aspx?AgrID={contractID}", ENDITEM, 
-		"Url=Styles_New/images/navTV/Arrow_Grey_Open.gif", "Referer=http://coraqa.eu.boehringer.com/App/ContentPage.aspx?AgrID={contractID}", ENDITEM, 
-		"Url=Styles_New/images/button-icon-edit.png", "Referer=http://coraqa.eu.boehringer.com/App/ContentPage.aspx?AgrID={contractID}", ENDITEM, 
 		LAST);
 
 	lr_end_transaction("03- select Contract",LR_AUTO);
@@ -542,16 +439,6 @@ Action()
 		"VudHBsYWNlSG9sZGVyTWFzdGVyJHVzZXJDb250cm9sX1VJJGJveF9Db250YWluZXJNb2RlVmlldyRNb3ZlTXVsdGlwbGVEb2N1bWVudHMFWWN0bDAwJENvbnRlbnRwbGFjZUhvbGRlck1hc3RlciR1c2VyQ29udHJvbF9VSSRib3hfQ29udGFpbmVyTW9kZVZpZXckQ29weU11bHRpcGxlRG9jdW1lbnRzBW9jdGwwMCRDb250ZW50cGxhY2VIb2xkZXJNYXN0ZXIkdXNlckNvbnRyb2xfVUkkYm94X0NvbnRhaW5lck1vZGVWaWV3JFVDRG9jdW1lbnRzJGRlbGV0ZUZvbGRlcl83OTI2NDczMjc3MTgyNTg1NTAFb2N0bDAwJENvbnRlbnRwbGFjZUhvbGRlck1hc3RlciR1c2VyQ29udHJvbF9VSSRib3hfQ29udGFpbmVyTW9kZVZpZXckVUNEb2N1bWVudHMkcmVuYW1lRm9sZGVy"
 		"Xzc5MjY0NzMyNzcxODI1ODU1MQVvY3RsMDAkQ29udGVudHBsYWNlSG9sZGVyTWFzdGVyJHVzZXJDb250cm9sX1VJJGJveF9Db250YWluZXJNb2RlVmlldyRVQ0RvY3VtZW50cyRkZWxldGVGb2xkZXJfNzkyNjQ3MzI3NzE4MjU4NTUxBW9jdGwwMCRDb250ZW50cGxhY2VIb2xkZXJNYXN0ZXIkdXNlckNvbnRyb2xfVUkkYm94X0NvbnRhaW5lck1vZGVWaWV3JFVDRG9jdW1lbnRzJHJlbmFtZUZvbGRlcl83OTI2NDczMjc3MTgyNTg1NTIFb2N0bDAwJENvbnRlbnRwbGFjZUhvbGRlck1hc3RlciR1c2VyQ29udHJvbF9VSSRib3hfQ29udGFpbmVyTW9kZVZpZXckVUNEb2N1bWVudHMkZGVsZXRlRm9sZGVyXzc5MjY0NzMyNzcxODI1ODU1MgUtY3RsMDAkQ29udGVudHBsYW"
 		"NlSG9sZGVyTWFzdGVyJFBvc3RCYWNrQnV0dG9uBTJjdGwwMCRDb250ZW50cGxhY2VIb2xkZXJNYXN0ZXIkQXN5bmNQb3N0QmFja0J1dHRvbuxP0a48XG79YwuajdD9yvkwKrEA&__VIEWSTATEGENERATOR=09F09E4B&__SCROLLPOSITIONX=0&__SCROLLPOSITIONY=0&tvNavigation_ExpandState=nnennnnncnnncnncnnncnnnnnnnnnnnnnnnnn&tvNavigation_SelectedNode=tvNavigationt2&tvNavigation_PopulateLog=&__ASYNCPOST=true&", 
-		EXTRARES, 
-		"Url=Images/Icon_CheckOut.gif", "Referer=http://coraqa.eu.boehringer.com/App/ContentPage.aspx?AgrID={contractID}", ENDITEM, 
-		"Url=Images/Icon_Delete.gif", "Referer=http://coraqa.eu.boehringer.com/App/ContentPage.aspx?AgrID={contractID}", ENDITEM, 
-		"Url=Images/Icon_PreviousVersions.png", "Referer=http://coraqa.eu.boehringer.com/App/ContentPage.aspx?AgrID={contractID}", ENDITEM, 
-		"Url=Images/icons/bullet_white.png", "Referer=http://coraqa.eu.boehringer.com/App/ContentPage.aspx?AgrID={contractID}", ENDITEM, 
-		"Url=Images/Icon_UndoCheckOut.gif", "Referer=http://coraqa.eu.boehringer.com/App/ContentPage.aspx?AgrID={contractID}", ENDITEM, 
-		"Url=Images/docx.gif", "Referer=http://coraqa.eu.boehringer.com/App/ContentPage.aspx?AgrID={contractID}", ENDITEM, 
-		"Url=Images/Icon_Approve.gif", "Referer=http://coraqa.eu.boehringer.com/App/ContentPage.aspx?AgrID={contractID}", ENDITEM, 
-		"Url=Images/Icon_Majorversion.gif", "Referer=http://coraqa.eu.boehringer.com/App/ContentPage.aspx?AgrID={contractID}", ENDITEM, 
-		"Url=Styles_New/images/input-ui-checkbox.png", "Referer=http://coraqa.eu.boehringer.com/App/ContentPage.aspx?AgrID={contractID}", ENDITEM, 
 		LAST);
 
 	web_revert_auto_header("X-MicrosoftAjax");
@@ -883,8 +770,6 @@ Action()
 		"ctl00%24ContentplaceHolderMaster%24userControl_UI%24box_ContainerModeView%24UCDocuments%24UserControls_ucApproval1%24hfCurrentObjectAWFIDType=&ctl00%24ContentplaceHolderMaster%24userControl_UI%24box_ContainerModeView%24UCDocuments%24UserControls_ucApproval1%24hfCurrentObjectAWFIDValue=&ctl00%24ContentplaceHolderMaster%24userControl_UI%24box_ContainerModeView%24UCDocuments%24UserControls_ucApproval1%24hfCurrentPredifinedAWFIDType=&"
 		"ctl00%24ContentplaceHolderMaster%24userControl_UI%24box_ContainerModeView%24UCDocuments%24UserControls_ucApproval1%24hfCurrentPredifinedAWFIDValue=&ctl00%24ContentplaceHolderMaster%24userControl_UI%24box_ContainerModeView%24UCDocuments%24UserControls_ucApproval1%24hfCurrentObjectAWFInEditMode=&ctl00%24ContentplaceHolderMaster%24userControl_UI%24box_ContainerModeView%24UCDocuments%24UserControls_ucApproval1%24hfChangeApprovalLevel=&"
 		"ctl00%24ContentplaceHolderMaster%24userControl_UI%24box_ContainerModeView%24UCDocuments%24boxScan%24fileName=&__ASYNCPOST=true&", 
-		EXTRARES, 
-		"Url=Download.aspx?DMSDocumentID=648532139643125773&BaseDocID=3adf3a36-19c4-40c5-b412-cfe04d68e0a3&Watermark=undefined", "Referer=http://coraqa.eu.boehringer.com/App/ContentPage.aspx?AgrID={contractID}", ENDITEM, 
 		LAST);
 
 	lr_end_transaction("04- Upload Contract",LR_AUTO);

@@ -1,0 +1,13 @@
+GET /App/ HTTP/1.1
+Cookie: AzureAppProxyAnalyticCookie_a4cc5064-d3dc-4631-b950-aa2561361aeb_1.3=3|qJ/rGq0eGXCSdnmDwkck0ziHBXFD82t3DOIZDF9Nu5ZtjpYrVMtCknWgsfyNuEQHbiYv3Zphgz+lskwmybEiIfwExiB10mldkuim5/Yy7GDru4hINgwKSHRIt9gOAux20J4Vge9XeHdtsM8qFSARhg==
+Referer: http://coraqa.eu.boehringer.com/
+UA-CPU: AMD64
+DNT: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US
+Accept: */*
+Host: coraqa.eu.boehringer.com
+Connection: Keep-Alive
+Cache-Control: no-cache
+

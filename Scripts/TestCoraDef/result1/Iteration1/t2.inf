@@ -1,0 +1,16 @@
+[t2]
+SnapshotXmlFile=snapshot_2.xml
+ContentType=text/html
+StepName=Url: App
+Total=2
+FileName1=t2.html
+FileName2=t1_0_2.js
+RequestHeaderFile=t2_RequestHeader.txt
+SaveSnapshotResources=1
+ResponseHeaderFile=t2_ResponseHeader.txt
+RawStepEndTime=1583405218143
+RawStepName=App
+RequestBodyFile=t2_RequestBody.txt
+RawStepStartTime=1583405214943
+URL1=https://login.microsoftonline.com/e1f8af86-ee95-4718-bd0d-375b37366c83/oauth2/authorize?response_type=code&client_id=a4cc5064-d3dc-4631-b950-aa2561361aeb&scope=openid&nonce=fe833208-f233-4462-b5b6-ceed3c99b539&redirect_uri=https://a4cc5064-d3dc-4631-b950-aa2561361aeb.eu.boehringer.com/&state=AppProxyState:{"InvalidTokenRetry":null,"IsMsofba":false,"OriginalRawUrl":"https:\/\/coraqa.eu.boehringer.com\/App\/","RequestProfileId":null}#EndOfStateParam#&client-request-id=f84ce86f-07ea-422a-9da6-2493f80a52ba
+URL2=https://aadcdn.msauth.net/ests/2.1/content/cdnbundles/ux.old.converged.login.pcore.min_c395chxpumwymgumps5atw2.js

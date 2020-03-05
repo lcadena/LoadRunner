@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-IC:\Users\licadena\Desktop\Cora\Scripts\TestCoraDef
+-IC:\Program Files (x86)\HPE\LoadRunner\include
+-ec:\users\licadena\desktop\cora\scripts\testcoradef\\logfile.log
+c:\users\licadena\desktop\cora\scripts\testcoradef\\combined_TestCoraDef.c
+c:\users\licadena\desktop\cora\scripts\testcoradef\\pre_cci.c

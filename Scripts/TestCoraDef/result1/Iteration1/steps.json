@@ -1,0 +1,14 @@
+[
+    {
+        "stepId": "STEP1",
+        "stepName": "Url: coraqa.eu.boehringer.com",
+        "infFile": "t1.inf",
+        "time": 1583405214898
+    },
+    {
+        "stepId": "STEP2",
+        "stepName": "Url: App",
+        "infFile": "t2.inf",
+        "time": 1583405218195
+    }
+]
